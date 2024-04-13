@@ -5,7 +5,7 @@ class Node():
         self.id = num
         self.left: Node | None = None
         self.right: Node | None = None
-        self.empty = self.is_empty()
+        self.empty = self.is_empty
 
     def is_empty(self):
         return self.left == None and self.right == None

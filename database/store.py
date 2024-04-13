@@ -56,14 +56,35 @@ class Store():
 
     def remove(self, target: int):
         if target == self.root.id:
-            if self.root.empty:
+            if self.root.is_empty():
                 self.root = None
-            return
+                return
+            else:
+                if (self.root.left and (self.root.right is None)) or (self.root.right and (self.root.left is None)):
+                    if self.root.left:
+                        self.root = self.root.left
+                        return
+                    else:
+                        self.root = self.root.right
+                        return
+                else:
+                    if self.root > self.root.right:
+                        min =  self.min(self.root.right)
+                        self.remove(min.id)
+                        self.root.data = min.data
+                        self.root.id = min.id
+                        return
+                    else:
+                        max = self.max(self.root.left)
+                        self.remove(max.id)
+                        self.root.data = max.data
+                        self.root.id = max.id
+                        return
         result = self.search(target, self.root)
         if result:
             parent = self.parent(self.root, result)
             if parent.left == result:
-                if result.empty:
+                if result.is_empty():
                     parent.left = None
                 elif (result.left and (result.right is None)) or (result.right and (result.left is None)):
                     if result.left:
@@ -74,13 +95,15 @@ class Store():
                     if result > result.right:
                         min =  self.min(result.right)
                         self.remove(min.id)
-                        parent.left = min
+                        parent.left.data = min.data
+                        parent.left.id = min.id
                     else:
                         max = self.max(result.left)
                         self.remove(max.id)
-                        parent.left = max
+                        parent.left.data = max.data
+                        parent.left.id = max.id
             else:
-                if result.empty:
+                if result.is_empty():
                     parent.right = None
                 elif (result.left and (result.right is None)) or (result.right and (result.left is None)):
                     if result.left:
@@ -91,11 +114,13 @@ class Store():
                     if result > result.right:
                         min =  self.min(result.right)
                         self.remove(min.id)
-                        parent.right = min
+                        parent.right.data = min.data
+                        parent.right.id = min.id
                     else:
                         max = self.max(result.left)
                         self.remove(max.id)
-                        parent.right = max
+                        parent.right.data = max.data
+                        parent.right.id = max.id
 
 
 

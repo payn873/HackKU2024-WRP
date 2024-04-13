@@ -7,12 +7,15 @@ def main():
     bst.add(Node(Item(12, "Bananas", 11.99), 2), bst.root)
     bst.add(Node(Item(20, "cookies", 15), 3), bst.root)
     biglist = bst.returnall(bst.root)
-    save(biglist)"""
+    save(biglist)
     bst = load()
     x = bst.returnall(bst.root)
     for i in x:
         print(i.id)
-    save(x)
+    save(x)"""
+    x = load()
+    x.remove(3)
+    save(x.returnall(x.root))
 
 if __name__ == "__main__":
     main()
