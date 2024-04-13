@@ -8,10 +8,7 @@ class Node():
         self.empty = self.is_empty()
 
     def is_empty(self):
-        if self.left == None and self.right == None:
-            return True
-        else:
-            return False
+        return self.left == None and self.right == None
     def __lt__(self, other):
         return self.id < other.id
 
