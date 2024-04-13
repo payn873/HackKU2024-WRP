@@ -1,9 +1,12 @@
 from node import Node
+
+
 class Store():
     def __init__(self, node: Node) -> None:
         self.root: Node | None = node
 
     def add(self, node: Node, current: Node | None):
+        # Adds a new node to the tree.
         if self.root == None:
             self.root = node
         elif node > current:
@@ -20,6 +23,7 @@ class Store():
             print("Duplicate id")
 
     def search(self, target: int, current: Node) -> Node | None:
+        # Searchs for a node with the target id.
         if target < current.id:
             return self.search(target, current.left)
         elif target > current.id:
@@ -28,6 +32,7 @@ class Store():
             return current
 
     def parent(self, node: Node, target: Node, parent: Node | None = None) -> Node:
+        # Gets the parent of the entered node.
         if parent:
             if node == target:
                 return parent
@@ -43,18 +48,22 @@ class Store():
                 return self.parent(node.right, target, node)
 
     def min(self, current):
+        # Gets the min value in the current subtree.
         if current.left:
             return self.min(current.left)
         else:
             return current
 
     def max(self, current):
+        # Gets the max value in the current subtree.
         if current.right:
             return self.max(current.right)
         else:
             return current
 
     def remove(self, target: int):
+        # Removes a node with the id of target from the tree.
+        # This is honestly not well made made but I really don't want to redo it.
         if target == self.root.id:
             if self.root.is_empty():
                 self.root = None
@@ -125,6 +134,7 @@ class Store():
 
 
     def returnall(self, current: Node) -> list:
+        # Creates a list of every node in the tree.
         if current.left:
             if current.right:
                 return [current] + self.returnall(current.left) + self.returnall(current.right)
