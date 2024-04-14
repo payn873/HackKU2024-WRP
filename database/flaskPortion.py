@@ -20,7 +20,7 @@ def menu():
     return fileText
 #Sets up search web page for destocking
 @app.route('/search/')
-def store():
+def destock():
     return fSearch
 #Sets up storage web page
 @app.route('/storage/')
