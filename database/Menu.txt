@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-/* Creates the starting window for the website that
-lets the user choose whether to increase, decrease, or check stock*/
 <head>
 <style>
 /* Styling user buttons */
@@ -25,7 +23,6 @@ lets the user choose whether to increase, decrease, or check stock*/
 </script>
 </head>
 <body>
-/*Assigning each button to a link of another page of the website*/
 <a href = "http://127.0.0.1:5000/search/">
 <button class="button buttonDe">De-Stock</button>
 </a>
