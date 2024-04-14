@@ -22,13 +22,13 @@
 </script>
 </head>
 <body>
-<a href = "http://127.0.0.1:5000/destock/">
+<a href = "http://127.0.0.1:5000/search/">
 <button class="button button1">De-Stock</button>
 </a>
 <a href = "http://127.0.0.1:5000/storage/">
 <button class="button button2">Storage</button>
 </a>
-<a href = "http://127.0.0.1:5000/restock/">
+<a href = "http://127.0.0.1:5000/search/">
 <button class="button button3">Re-Stock</button>
 </a>
 
