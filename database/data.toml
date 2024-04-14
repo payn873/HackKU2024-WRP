@@ -3,6 +3,16 @@ amount = 20
 name = "cookies"
 price = 15
 
+[3]
+amount = 30
+name = "apples"
+price = 20
+
+[2]
+amount = 10
+name = "chocolate"
+price = 10
+
 [4]
 amount = 50
 name = "chips"
