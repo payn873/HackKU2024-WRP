@@ -1,5 +1,0 @@
-import tkinter
-window = tk.Tk()
-for i in range(1,10):
-     ins = tk.Label(text = "store")
-     ins.pack()
