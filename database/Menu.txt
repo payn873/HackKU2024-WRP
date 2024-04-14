@@ -17,9 +17,9 @@ lets the user choose whether to increase, decrease, or check stock*/
   cursor: pointer;
 }
 /*Creating button colors*/
-.button1 {background-color: #008CBA;} /* Green */
-.button2 {background-color: #04AA6D;} /* Blue */
-.button3 {background-color: #E0F000;} /* Yellow */
+.buttonDe {background-color: #008CBA;}
+.buttonSto {background-color: #04AA6D;}
+.buttonRe {background-color: #E0F000;}
 </style>
 <title>Inventory Database Menu</title>
 </script>
@@ -27,13 +27,13 @@ lets the user choose whether to increase, decrease, or check stock*/
 <body>
 /*Assigning each button to a link of another page of the website*/
 <a href = "http://127.0.0.1:5000/search/">
-<button class="button button1">De-Stock</button>
+<button class="button buttonDe">De-Stock</button>
 </a>
 <a href = "http://127.0.0.1:5000/storage/">
-<button class="button button2">Storage</button>
+<button class="button buttonSto">Storage</button>
 </a>
 <a href = "http://127.0.0.1:5000/search/">
-<button class="button button3">Re-Stock</button>
+<button class="button buttonRe">Re-Stock</button>
 </a>
 
 </body>
