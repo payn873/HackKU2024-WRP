@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+/* Creates the starting window for the website that
+lets the user choose whether to increase, decrease, or check stock*/
 <head>
 <style>
+/* Styling user buttons */
 .button {
   border: none;
   color: white;
@@ -13,7 +16,7 @@
   margin: 55px 55px;
   cursor: pointer;
 }
-
+/*Creating button colors*/
 .button1 {background-color: #008CBA;} /* Green */
 .button2 {background-color: #04AA6D;} /* Blue */
 .button3 {background-color: #E0F000;} /* Yellow */
@@ -22,6 +25,7 @@
 </script>
 </head>
 <body>
+/*Assigning each button to a link of another page of the website*/
 <a href = "http://127.0.0.1:5000/search/">
 <button class="button button1">De-Stock</button>
 </a>
