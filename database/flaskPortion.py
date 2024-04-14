@@ -30,7 +30,4 @@ def storage():
 @app.route('/restock/')
 def restock():
     return fSearch
-#Creates webpage for item being searched
-@app.route(f'/search/?search={request.form[search]}')
-def stock():
-    return 'success'
+
