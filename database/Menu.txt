@@ -8,7 +8,6 @@
   color: white;
   padding: 45px 96px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 48px;
   margin: 55px 55px;
