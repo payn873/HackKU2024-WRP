@@ -1,8 +1,7 @@
 '''
 Creates urls for website
 '''
-from flask import Flask, url_for, request, render_template
-from markupsafe import escape
+from flask import Flask, request
 
 app = Flask(__name__)
 fMenu = ''
@@ -17,7 +16,7 @@ def menu():
     for line in fMenu:
         fileText += line
     return fileText
-@app.route('/destock/')
+@app.route('/search/')
 def store():
     return fSearch
 @app.route('/storage/')
@@ -26,5 +25,6 @@ def storage():
 @app.route('/restock/')
 def restock():
     return fSearch
-
-
+@app.route(f'/search/?search={request.form[search]}')
+def stock():
+    return 'success'
