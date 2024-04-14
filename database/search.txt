@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+/*Web page for searching database for a specific item*/
 <head>
 <title>Search</title>
 </head>
 <body>
 <h1>Search For An Item (Enter ID)</h1>
 <br>
-<form action="" method="get">
+/*Creates a form text input and submit button*/
 <input type = "text" name = "search">
 <input type="submit" value="Submit">
 </form>
